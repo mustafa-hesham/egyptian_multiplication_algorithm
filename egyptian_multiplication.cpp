@@ -1,7 +1,7 @@
-// An algorithm of multiplication based on the ancient Egyptian method. It uses a recursive function to determine which doubles of a number to be summed up. The first number goes through
-// series of finding logarithm to the base two. Each time first number logarithm to the base two is calculated, the remainder goes through the same operation until it reaches the
-// base case; log2(2). For example, if the function finds out that the second number is to be multiplied by its forth double, then the solution is:
-// Second number * 2^4. The function will produce a result of 4 when the first number is 16.
+/* An algorithm of multiplication based on the ancient Egyptian method. It uses a recursive function to determine which doubles of a number to be summed up. 
+The first number goes through a series of finding logarithms to the base two. Each time first number logarithm to the base two is calculated, the remainder goes through 
+the same operation until it reaches the base case; log2(1). For example, if the function finds out that the second number is to be multiplied by its forth double, 
+then the solution is: Second number * 2^4. The function will produce a result of 4 when the first number is 16. */
 
 #include <iostream>
 #include <math.h>
