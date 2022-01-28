@@ -5,7 +5,6 @@ then the solution is: Second number * 2^4. The function will produce a result of
 
 #include <iostream>
 #include <math.h>
-#include <vector>
 
 using namespace std;
 
