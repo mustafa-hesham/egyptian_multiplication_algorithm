@@ -11,7 +11,6 @@ using namespace std;
 
 int log2Series(int number1, int number2);
 bool is_integer(float k);
-vector<int> exponents;
 
 
 int main(){
@@ -28,16 +27,13 @@ int main(){
 // Recursive function to find the exponents of two to be multiplied by the second number and sum all terms
 
 int log2Series(int number1, int number2){
-		int product = 0;
+		static int product = 0;
 	if (is_integer(log2(number1))){
-		exponents.push_back(log2(number1));
-		for (int exp = 0; exp < exponents.size(); exp++)
-		product += (number2 * pow(2, exponents[exp])); //Summing all terms
+		product += (number2 * pow(2, log2(number1)));
 		return product;
 		}
-		
 	else{
-		exponents.push_back(floor(log2(number1)));
+		product += (number2 * pow(2, floor(log2(number1))));
 		log2Series(number1 - pow(2, floor(log2(number1))), number2);
 	}
 }
